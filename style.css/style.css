@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header, footer {
+    background: rgb(49, 49, 49);
+    color: white;
+    padding: 10px 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    margin-left: 20px;
+    color: rgb(28, 142, 58);
+}
+
+nav#menu {
+    margin-right: 20px;
+}
+
+nav#menu ul {
+    list-style: none;
+    display: flex;
+}
+
+nav#menu ul li {
+    margin-right: 15px;
+}
+
+nav#menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#burger, #fermer {
+    display: none;
+    cursor: pointer;
+}
+
+#burger {
+    margin-right: 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    width: 35px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+#fermer {
+    position: absolute;
+    right: 10px;
+    font-size: 1.5rem;
+    top: 0;
+}
+
+main {
+    padding-bottom: 45px;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/*  sous menu */
+
+#menu ul li ul.sous-menu{
+    display:none;
+    flex-direction:column;
+    position:absolute; 
+    background: rgb(49, 49, 49);
+    z-index:99;    
+}
+
+#menu>ul li:hover ul.sous-menu{
+    display:flex;
+    color: rgb(28, 142, 58);
+}
+
+
+
+
+@media screen and (max-width:768px) {
+
+    #burger {
+        display: flex;
+    }
+
+    #menu {
+        top: 0;
+        position: absolute;
+        left: -100%;
+        z-index: 99;
+        background: rgb(44, 44, 44);
+        width: 100%;
+        height: 100vh;
+        padding-top: 35px;
+    }
+
+    #fermer {
+        display: block;
+    }
+
+    #menu ul {
+        flex-direction: column;
+    }
+
+    #menu ul li {
+        text-align: center;
+        margin: 10px;
+    }
+
+    #menu.deploye {
+        left: 0;
+    }
+
+    #menu.transition {
+        transition: 1s;
+    }
+
+}
+
+
+.a-propos, .a-voir, .a-manger, .en-plus{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: justify;
+    padding: 5%;
+}
+
+.img-champs{
+    background: url("../img/image1.jpg");
+    height: 421px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.texte-champs, .texte-ville{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: justify;
+    padding: 5%;
+}
+
+.img-ville{
+    background:url("../img/image2.jpg");
+    height: 407px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lac{
+    background: url("../img/image3.jpg");
+    height: 683px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-rondes img{
+    width: 65%;
+    height: 70%;
+}
+
+.img-rondes div{
+    text-align: center;
+}
+
+.restaurant{
+    background: url("../img/image7.jpg");
+    height: 768px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
